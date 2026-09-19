@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>StyleHer - Women's Fashion</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f8f5f7;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #ff4f81, #8e44ad);
+      color: white;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 8%;
+      background: linear-gradient(120deg, #ffe0ea, #eee0ff);
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      color: #8e2d5f;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff4081;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero img {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 8px solid white;
+      box-shadow: 0 10px 30px #aaa;
+    }
+
+    /* Categories */
+    .categories {
+      padding: 40px 7%;
+      text-align: center;
+    }
+
+    .categories h2,
+    .products h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #8e2d5f;
+    }
+
+    .category-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .category {
+      background: white;
+      padding: 18px 30px;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px #ddd;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .category:hover {
+      background: #ff4081;
+      color: white;
+    }
+
+    /* Products */
+    .products {
+      padding: 40px 7%;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px #ddd;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .card h3 {
+      color: #8e2d5f;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .rating {
+      color: #f5a623;
+      margin-bottom: 12px;
+    }
+
+    .buy {
+      display: block;
+      text-align: center;
+      background: #8e44ad;
+      color: white;
+      padding: 11px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      background: #29202b;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media(max-width: 700px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero img {
+        width: 280px;
+        height: 280px;
+        margin-top: 30px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">✨ StyleHer</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Collection</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>Fashion That Defines You</h1>
+
+      <p>
+        Discover the latest women's fashion,
+        trending outfits and stylish collections
+        for every occasion.
+      </p>
+
+      <a href="#products" class="btn">Explore Collection</a>
+    </div>
+
+    <img
+      src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"
+      alt="Women's fashion">
+  </section>
+
+
+  <!-- Categories -->
+  <section class="categories" id="categories">
+
+    <h2>Shop By Category</h2>
+
+    <div class="category-list">
+      <div class="category">👗 Dresses</div>
+      <div class="category">👚 Tops</div>
+      <div class="category">👖 Jeans</div>
+      <div class="category">👜 Accessories</div>
+      <div class="category">👠 Footwear</div>
+    </div>
+
+  </section>
+
+
+  <!-- Products -->
+  <section class="products" id="products">
+
+    <h2>Trending Fashion</h2>
+
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="card">
+
+        <img
+          src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80"
+          alt="Pink dress">
+
+        <div class="card-content">
+
+          <h3>Elegant Pink Dress</h3>
+
+          <div class="rating">
+            ★★★★★
+          </div>
+
+          <p>Stylish party wear dress</p>
+
+          <div class="price">₹1,999</div>
+
+          <a href="#" class="buy">Shop Now</a>
+
+        </div>
+      </div>
+
+
+      <!-- Product 2 -->
+      <div class="card">
+
+        <img
+          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80"
+          alt="Fashion outfit">
+
+        <div class="card-content">
+
+          <h3>Modern Casual Outfit</h3>
+
+          <div class="rating">
+            ★★★★☆
+          </div>
+
+          <p>Perfect for everyday style</p>
+
+          <div class="price">₹1,499</div>
+
+          <a href="#" class="buy">Shop Now</a>
+
+        </div>
+      </div>
+
+
+      <!-- Product 3 -->
+      <div class="card">
+
+        <img
+          src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=600&q=80"
+          alt="Women's clothing">
+
+        <div class="card-content">
+
+          <h3>Summer Collection</h3>
+
+          <div class="rating">
+            ★★★★★
+          </div>
+
+          <p>Fresh and comfortable summer wear</p>
+
+          <div class="price">₹1,299</div>
+
+          <a href="#" class="buy">Shop Now</a>
+
+        </div>
+      </div>
+
+
+      <!-- Product 4 -->
+      <div class="card">
+
+        <img
+          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80"
+          alt="Women's fashion model">
+
+        <div class="card-content">
+
+          <h3>Premium Fashion</h3>
+
+          <div class="rating">
+            ★★★★★
+          </div>
+
+          <p>Premium collection for special occasions</p>
+
+          <div class="price">₹2,499</div>
+
+          <a href="#" class="buy">Shop Now</a>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 StyleHer | Women's Fashion Store</p>
+  </footer>
+
+</body>
+</html>
